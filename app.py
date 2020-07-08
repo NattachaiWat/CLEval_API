@@ -51,9 +51,9 @@ def upload_file():
         pred_file = request.files['pred_file']
 
         if gt_file.filename == '':
-            return json.loads(json.dumps({'status':'gt_file is null'}))
+            return json.loads(json.dumps({'status':'gt_file is null.'}))
         if pred_file.filename == '':
-            return json.loads(json.dumps({'status':'pred_file is null'}))
+            return json.loads(json.dumps({'status':'pred_file is null.'}))
 
 
         if not(gt_file and allowed_file(gt_file.filename) and pred_file and allowed_file(pred_file.filename)):
